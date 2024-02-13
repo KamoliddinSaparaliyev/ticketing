@@ -1,0 +1,6 @@
+GET http://ticketing.dev
+
+{
+    "email":"user@gmail.com",
+    "password":"kamol16042002"
+}

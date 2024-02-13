@@ -3,7 +3,8 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      - ./infra/k8s/*
+      # - ./infra/k8s/*
+      - ./infra/k8s-dev/*
 build:
   local:
     push: false
@@ -16,3 +17,43 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    # - image: kamol1/ticketing-client
+    #   context: client
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: "**/*.js"
+    #         dest: .
+    # - image: kamol1/tickets
+    #   context: tickets
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: "src/**/*.ts"
+    #         dest: .
+    # - image: kamol1/orders
+    #   context: orders
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: "src/**/*.ts"
+    #         dest: .
+    # - image: kamol1/expiration
+    #   context: expiration
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: "src/**/*.ts"
+    #         dest: .
+    # - image: kamol1/payments
+    #   context: payments
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: "src/**/*.ts"
+    #         dest: .
