@@ -1,4 +1,4 @@
-GET http://ticketing.dev
+GET http://ticketing.dev/api/users/signup
 
 {
     "email":"user@gmail.com",
